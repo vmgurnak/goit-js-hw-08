@@ -1,3 +1,4 @@
+// Экспорт массива объектов
 export const galleryItems = [
   {
     preview:

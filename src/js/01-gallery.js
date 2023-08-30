@@ -1,3 +1,8 @@
+// Задание 1 - библиотека SimpleLightbox
+
+// Добавь библиотеку SimpleLightbox как зависимость проекта используя npm (ссылка на CDN из твоей прошлой работы больше не нужна).
+// Используй свой JavaScript код из предыдущей домашней работы, но выполни рефакторинг с учетом того, что библиотека была установлена через npm (синтаксис import/export).
+
 // Add imports above this line
 // import { galleryItems } from './gallery-items';
 // Change code below this line
@@ -56,6 +61,6 @@ const lightbox = new SimpleLightbox('.gallery a', {
 import SimpleLightbox from 'simplelightbox';
 // Plain ES Module without Babel
 // import 'simplelightbox/dist/simple-lightbox.esm';
-import SimpleLightbox from 'simplelightbox/dist/simple-lightbox.esm';
+// import SimpleLightbox from 'simplelightbox/dist/simple-lightbox.esm';
 // Дополнительный импорт стилей
 import 'simplelightbox/dist/simple-lightbox.min.css';

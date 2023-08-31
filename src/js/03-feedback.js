@@ -44,10 +44,6 @@ form.addEventListener(
 
 // Коллбэк-функция для слушателя с input
 function formInput(event) {
-  //   Дескруктуризация, свойство DOM-элемента формы объекта с элементами
-  const {
-    elements: { email, message },
-  } = event.currentTarget;
   // Объект с текущим значением email и message
   const dateForm = {
     email: email.value,
@@ -64,10 +60,6 @@ form.addEventListener('submit', formSubmit);
 function formSubmit(event) {
   // Отмена действий по умолчанию
   event.preventDefault();
-  //   Дескруктуризация, свойство DOM-элемента формы объекта с элементами
-  const {
-    elements: { email, message },
-  } = event.currentTarget;
   // вывод в консоль объекта
   console.log({
     [email.name]: email.value,

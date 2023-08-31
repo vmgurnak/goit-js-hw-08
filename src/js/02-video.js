@@ -12,7 +12,6 @@
 
 // Поиск iframe
 const iframe = document.querySelector('#vimeo-player');
-// console.log(iframe);
 
 // Инициализация Vimeo плеера.
 // npm install @vimeo/player
@@ -27,9 +26,15 @@ import throttle from 'lodash.throttle';
 player.on('timeupdate', throttle(onTimeupdate, 1000));
 // Коллбэк - функция, сохранение в локальном хранилище времени воспроизведения
 function onTimeupdate(date) {
-  console.log(date);
+  //   console.log(date);
   localStorage.setItem('videoplayer-current-time', date.seconds);
 }
 
-// Метод setCurrentTime() возобновление воспроизведение с сохраненной позиции.
-player.setCurrentTime(localStorage.getItem('videoplayer-current-time'));
+// Чтение из локального хранилища
+const savedDate = localStorage.getItem('videoplayer-current-time');
+
+// Условие выполняется при наличие данных в хранилище
+if (savedDate) {
+  // Метод setCurrentTime() возобновление воспроизведение с сохраненной позиции.
+  player.setCurrentTime(localStorage.getItem('videoplayer-current-time'));
+}

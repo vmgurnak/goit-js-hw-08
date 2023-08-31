@@ -11,12 +11,11 @@
 // 7. Добавь в проект библиотеку lodash.throttle и сделай так, чтобы время воспроизведения обновлялось в хранилище не чаще чем раз в секунду.
 
 // Поиск iframe
-const iframe = document.querySelector('iframe');
+const iframe = document.querySelector('#vimeo-player');
 // console.log(iframe);
 
-// Добавление в библиотеку как зависимость проекта через npm Vimeo плеера.
+// Инициализация Vimeo плеера.
 // npm install @vimeo/player
-// Инициализация плеера
 import Player from '@vimeo/player';
 const player = new Player(iframe);
 

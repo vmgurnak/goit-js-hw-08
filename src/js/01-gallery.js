@@ -3,15 +3,14 @@
 // Добавь библиотеку SimpleLightbox как зависимость проекта используя npm (ссылка на CDN из твоей прошлой работы больше не нужна).
 // Используй свой JavaScript код из предыдущей домашней работы, но выполни рефакторинг с учетом того, что библиотека была установлена через npm (синтаксис import/export).
 
-// Add imports above this line
-// import { galleryItems } from './gallery-items';
-// Change code below this line
-
-console.log(galleryItems);
-
 // Импорт массива объектов
 import { galleryItems } from './gallery-items.js';
 // console.log(galleryItems);
+
+// Подключение библиотеки
+import SimpleLightbox from 'simplelightbox';
+// Дополнительный импорт стилей
+import 'simplelightbox/dist/simple-lightbox.min.css';
 
 // 1. Создание и рендер разметки по массиву данных galleryItems и предоставленному шаблону элемента галереи. Используй готовый код из первого задания.
 
@@ -41,6 +40,8 @@ function createMarkup(arr) {
   );
 }
 
+console.log(createMarkup(galleryItems));
+
 // Добавление строки разметки в DOM дерево, метод insertAdjacentHTML, "beforebegin" - внутри elem, после всех детей
 // Вызов функции reateMarkup(arr) с параметром массив объектов galleryItems
 
@@ -54,13 +55,3 @@ const lightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionDelay: 250,
 });
-
-// Подключение библиотеки
-// Module with Babel tranformation
-// import 'simplelightbox';
-import SimpleLightbox from 'simplelightbox';
-// Plain ES Module without Babel
-// import 'simplelightbox/dist/simple-lightbox.esm';
-// import SimpleLightbox from 'simplelightbox/dist/simple-lightbox.esm';
-// Дополнительный импорт стилей
-import 'simplelightbox/dist/simple-lightbox.min.css';

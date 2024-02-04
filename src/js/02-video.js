@@ -26,12 +26,13 @@ import throttle from 'lodash.throttle';
 player.on('timeupdate', throttle(onTimeupdate, 1000));
 // Коллбэк - функция, сохранение в локальном хранилище времени воспроизведения
 function onTimeupdate(date) {
-  //   console.log(date);
+  console.log(date);
   localStorage.setItem('videoplayer-current-time', date.seconds);
 }
 
 // Чтение из локального хранилища
 const savedDate = localStorage.getItem('videoplayer-current-time');
+console.log(savedDate);
 
 // Условие выполняется при наличие данных в хранилище
 if (savedDate) {
